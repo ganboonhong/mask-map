@@ -12,8 +12,8 @@ class Pharmacy
     public function __construct()
     {
         $webroot = Yii::$app->params['basePath'] . '/web/';
-        $this->maskFile = $webroot . 'assets/pharmacy/mask-stock.json';
-        $this->storesFile = $webroot . 'assets/pharmacy/stores.json';
+        $this->maskFile = $webroot . 'static/pharmacy/mask-stock.json';
+        $this->storesFile = $webroot . 'static/pharmacy/stores.json';
     }
 
     /**

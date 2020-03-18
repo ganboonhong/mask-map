@@ -24,7 +24,7 @@ class PharmacyController extends Controller
 
     public function actionGetMap()
     {
-        $maskFile = Yii::getAlias('@webroot/assets/pharmacy/mask-stock.json');
+        $maskFile = Yii::getAlias('@webroot/static/pharmacy/mask-stock.json');
         $result = json_decode(file_get_contents($maskFile));
 
         return Yii::createObject([

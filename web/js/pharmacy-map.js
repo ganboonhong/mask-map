@@ -13,7 +13,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 var markers = L.markerClusterGroup();
 
 let xhr = new XMLHttpRequest();
-xhr.open('GET', '../assets/pharmacy/mask-stock.json');
+xhr.open('GET', '../static/pharmacy/mask-stock.json');
 xhr.send();
 xhr.onload = function () {
     let data = JSON.parse(xhr.responseText);
