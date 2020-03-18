@@ -10,10 +10,13 @@ $config = [
     'controllerNamespace' => 'app\commands',
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
-        '@npm'   => '@vendor/npm-asset',
+        '@npm' => '@vendor/npm-asset',
         '@tests' => '@app/tests',
     ],
     'components' => [
+        'config' => [
+            'class' => 'application.extensions.EConfig',
+        ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
@@ -21,7 +24,8 @@ $config = [
             'targets' => [
                 [
                     'class' => 'yii\log\FileTarget',
-                    'levels' => ['error', 'warning'],
+                    'levels' => ['error', 'warning', 'info'],
+                    'logVars' => [],
                 ],
             ],
         ],
@@ -29,12 +33,12 @@ $config = [
     ],
     'params' => $params,
     /*
-    'controllerMap' => [
-        'fixture' => [ // Fixture generation command line.
-            'class' => 'yii\faker\FixtureController',
-        ],
-    ],
-    */
+'controllerMap' => [
+'fixture' => [ // Fixture generation command line.
+'class' => 'yii\faker\FixtureController',
+],
+],
+ */
 ];
 
 if (YII_ENV_DEV) {
