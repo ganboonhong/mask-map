@@ -32,4 +32,5 @@ tests/_support/_generated
 #vagrant folder
 /.vagrant
 web/static/pharmacy/mask-stock.json
+.env
 web/.env
