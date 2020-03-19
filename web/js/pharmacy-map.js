@@ -104,7 +104,7 @@ function reloadData() {
 setInterval(function () {
     markers.clearLayers();
     reloadData();
-}, 10 * 60)
+}, 10 * 60 * 1000)
 
 var options = {
     enableHighAccuracy: true,
