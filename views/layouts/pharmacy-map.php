@@ -5,7 +5,6 @@
 
 use app\assets\AppAsset;
 use app\widgets\Alert;
-use yii\helpers\Html;
 
 AppAsset::register($this);
 ?>
@@ -16,8 +15,9 @@ AppAsset::register($this);
     <meta charset="<?=Yii::$app->charset?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:description" content="健保特約藥局口罩地圖">
     <?php $this->registerCsrfMetaTags()?>
-    <title><?=Html::encode($this->title)?></title>
+    <title>口罩地圖</title>
     <?php $this->head()?>
 </head>
 <style>
