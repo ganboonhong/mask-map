@@ -16,6 +16,7 @@ AppAsset::register($this);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:description" content="健保特約藥局口罩地圖">
+    <meta name="description" content="my-lab ddns 健保特約藥局口罩地圖">
     <?php $this->registerCsrfMetaTags()?>
     <title>口罩地圖</title>
     <?php $this->head()?>
