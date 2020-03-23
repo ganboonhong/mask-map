@@ -61,8 +61,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->redirect('pharmacy/map');
-        // return $this->render('index');
+        return $this->render('index');
     }
 
     /**
