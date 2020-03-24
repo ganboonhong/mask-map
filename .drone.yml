@@ -4,10 +4,9 @@ type: exec
 name: default
 
 steps:
-  - name: build
+  - name: greeting
     commands:
-      - composer install
-      - vendor/bin/codecept run
+      - echo hello world
 
 trigger:
   branch:
