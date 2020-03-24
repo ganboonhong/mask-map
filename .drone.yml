@@ -1,0 +1,16 @@
+---
+kind: pipeline
+type: exec
+name: default
+
+steps:
+  - name: build
+    commands:
+      - composer install
+      - vendor/bin/codecept run
+
+trigger:
+  branch:
+    - master
+  even:
+    - push
