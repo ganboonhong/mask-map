@@ -5,13 +5,25 @@ name: default
 
 steps:
   - name: install
+    # Pipeline steps are defined as a series of Docker containers. Each step must therefore define the Docker image used to create the container.
     image: composer
     commands:
       - composer install
 
+  #
   - name: test
     image: php:7
     commands:
+      # have to install imagick in order to run tests successfully
+
+      # apt-get update: fetches you a list of packages for all of your repositories and PPA’s and make sure it is up to date
+      # apt-get upgrade: does an actual software upgrade.
+      - apt-get update && apt-get install -y libmagickwand-dev --no-install-recommends
+
+      # docker-php-ext-enable
+      - pecl install imagick-3.4.4 && docker-php-ext-enable imagick
+
+      # run test cases via codecept
       - vendor/bin/codecept run
 
 trigger:
