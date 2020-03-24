@@ -4,9 +4,15 @@ type: exec
 name: default
 
 steps:
-  - name: greeting
+  - name: install
+    image: composer
     commands:
-      - echo hello world
+      - composer install
+
+  - name: test
+    image: php:7
+    commands:
+      - vendor/bin/codecept run
 
 trigger:
   branch:
