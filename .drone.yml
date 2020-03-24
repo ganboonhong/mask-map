@@ -10,7 +10,6 @@ steps:
     commands:
       - composer install
 
-  #
   - name: test
     image: php:7
     commands:
@@ -20,7 +19,7 @@ steps:
       # apt-get upgrade: does an actual software upgrade.
       - apt-get update && apt-get install -y libmagickwand-dev --no-install-recommends
 
-      # docker-php-ext-enable
+      # use docker-php-ext-enable command to enable it
       - pecl install imagick-3.4.4 && docker-php-ext-enable imagick
 
       # run test cases via codecept
