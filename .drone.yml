@@ -13,7 +13,7 @@ steps:
   - name: test
     image: php:7
     commands:
-      # have to install imagick in order to run tests successfully
+      # Install imagick in order to run tests successfully
 
       # apt-get update: fetches you a list of packages for all of your repositories and PPA’s and make sure it is up to date
       # apt-get upgrade: does an actual software upgrade.
@@ -26,7 +26,7 @@ steps:
       - vendor/bin/codecept run
 
 trigger:
-  branch:
-    - master
-  even:
+  repo:
+    - ganboonhong/mask-map
+  event:
     - push
