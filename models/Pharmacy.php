@@ -18,10 +18,8 @@ class Pharmacy
 
     /**
      * sync mask data from authority API
-     *
-     * @return void
      */
-    public function sync(): void
+    public function sync()
     {
         $data = $this->fetchMaskData();
         if (!$data) {
@@ -30,8 +28,12 @@ class Pharmacy
 
         $data = $this->processData($data);
 
-        $this->updateMaskData($data);
-        Yii::info('synced');
+        $r = $this->updateMaskData($data);
+
+        if (is_int($r)) {
+            Yii::info('synced');
+        }
+        return $r;
     }
 
     /**
@@ -52,9 +54,8 @@ class Pharmacy
      * Write latest data to file
      *
      * @param array $data
-     * @return void
      */
-    private function updateMaskData(array $data): void
+    private function updateMaskData(array $data)
     {
         $stores = json_decode(file_get_contents($this->storesFile), true);
 
@@ -64,10 +65,10 @@ class Pharmacy
         }
 
         $fp = fopen($this->maskFile, 'w+');
-        fwrite($fp, json_encode($data));
+        $r = fwrite($fp, json_encode($data));
         fclose($fp);
 
-        return;
+        return $r;
     }
 
     /**
