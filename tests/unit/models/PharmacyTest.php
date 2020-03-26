@@ -11,6 +11,6 @@ class PharmacyTest extends Unit
         $pharmacy = $this->make(new Pharmacy);
         $pharmacy = new Pharmacy;
         $actual = $pharmacy->sync();
-        $this->assertIsNotInt($actual);
+        $this->assertIsInt($actual);
     }
 }
