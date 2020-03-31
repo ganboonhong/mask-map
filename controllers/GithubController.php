@@ -9,6 +9,6 @@ class GithubController extends Controller
     public function actionWebhook()
     {
         $data = json_decode(file_get_contents('php://input'), true);
-        Yii::info($data);
+        Yii::info(json_encode($data));
     }
 }
