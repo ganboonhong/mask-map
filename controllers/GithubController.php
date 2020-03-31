@@ -23,6 +23,12 @@ class GithubController extends Controller
         }
     }
 
+    /**
+     * Check whether the webhook event is a PR merge event
+     *
+     * @param array $data
+     * @return boolean
+     */
     private function isPRMerged(array $data): bool
     {
         return
