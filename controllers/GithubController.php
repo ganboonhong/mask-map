@@ -12,7 +12,7 @@ class GithubController extends Controller
      *
      * @return void
      */
-    public function actionWebhook()
+    public function actionWebhook(): void
     {
         $data = json_decode(file_get_contents('php://input'), true);
 
