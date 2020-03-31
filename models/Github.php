@@ -8,10 +8,10 @@ class Github
     /**
      * Execute deploy script
      *
-     * @return string
+     * @return void
      */
-    public function deploy(): string
+    public function deploy(): void
     {
-        return exec(Yii::$app->params['basePath'] . '/scripts/deploy.sh');
+        exec(Yii::$app->params['basePath'] . '/scripts/deploy.sh');
     }
 }
