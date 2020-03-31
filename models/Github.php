@@ -5,8 +5,13 @@ use Yii;
 
 class Github
 {
-    public function deploy()
+    /**
+     * Execute deploy script
+     *
+     * @return string
+     */
+    public function deploy(): string
     {
-        echo exec(Yii::$app->params['basePath'] . '/scripts/deploy.sh');
+        return exec(Yii::$app->params['basePath'] . '/scripts/deploy.sh');
     }
 }

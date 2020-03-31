@@ -10,17 +10,19 @@ class GithubController extends Controller
     /**
      * Deploy to production when PR is merged
      *
-     * @return void
+     * @return string
      */
-    public function actionWebhook(): void
+    public function actionWebhook(): string
     {
         $data = json_decode(file_get_contents('php://input'), true);
 
         if ($data && $this->isPRMerged($data)) {
             Yii::info(json_encode($data));
             $github = new Github;
-            $github->deploy();
+            return $github->deploy();
         }
+
+        return "Nothing executed";
     }
 
     /**
