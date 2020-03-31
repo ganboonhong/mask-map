@@ -5,6 +5,6 @@
 cd ~/mask-map \
 && git checkout master \
 && git pull \
-# && echo "composer installing" \
+&& echo "composer installing" \
 && composer install --no-dev \
 && echo "deployed successfully"
