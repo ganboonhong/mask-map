@@ -32,7 +32,9 @@ class GithubController extends Controller
     private function isPRMerged(array $data): bool
     {
         return
-        isset($data['action']) && $data['action'] === 'closed'
-        && isset($data['pull_request']['merged']) && $data['pull_request']['merged'] === true;
+        isset($data['action'])
+        && $data['action'] === 'closed'
+        && isset($data['pull_request']['merged'])
+            && $data['pull_request']['merged'] === true;
     }
 }
