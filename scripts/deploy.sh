@@ -1,7 +1,7 @@
 #!/bin/bash
 # echo "Deploying application"
 
-cd /var/www/html/my-lab/mask-map
+cd /var/www/html/my-lab/mask-map \
 # cd ~/mask-map \
 && git checkout master \
 && git pull \
