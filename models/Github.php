@@ -12,6 +12,6 @@ class Github
      */
     public function deploy(): string
     {
-        echo exec(Yii::$app->params['basePath'] . '/scripts/deploy.sh');
+        return exec(Yii::$app->params['basePath'] . '/scripts/deploy.sh');
     }
 }
