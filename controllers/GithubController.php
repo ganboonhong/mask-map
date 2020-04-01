@@ -22,7 +22,7 @@ class GithubController extends Controller
             return $github->deploy();
         }
 
-        return 'Nothing executed 1128';
+        return 'Nothing executed';
     }
 
     /**
