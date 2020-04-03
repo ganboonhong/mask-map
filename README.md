@@ -1,7 +1,6 @@
 [![Build Status](https://cloud.drone.io/api/badges/ganboonhong/mask-map/status.svg)](https://cloud.drone.io/ganboonhong/mask-map)
 
-![](https://github.com/ganboonhong/mask-map/workflows/Greet%20Everyone/badge.svg)
-
+![PHP Composer Install & Test](https://github.com/ganboonhong/mask-map/workflows/PHP%20Composer%20Install%20&%20Test/badge.svg)
 
 ### A mask map implementation with Yii framework
 
