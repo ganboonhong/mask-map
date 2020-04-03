@@ -1,6 +1,6 @@
 [![Build Status](https://cloud.drone.io/api/badges/ganboonhong/mask-map/status.svg)](https://cloud.drone.io/ganboonhong/mask-map)
 
-[![](https://github.com/ganboonhong/mask-map/workflows/Greet%20Everyone/badge.svg)]
+![](https://github.com/ganboonhong/mask-map/workflows/Greet%20Everyone/badge.svg)
 
 
 ### A mask map implementation with Yii framework
