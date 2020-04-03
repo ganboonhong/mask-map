@@ -45,6 +45,7 @@
         }
     },
     "scripts": {
+        "test": "vendor/bin/codecept run",
         "post-install-cmd": [
             "yii\\composer\\Installer::postInstall"
         ],
