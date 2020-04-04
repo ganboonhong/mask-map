@@ -1,13 +1,12 @@
 [![Build Status](https://cloud.drone.io/api/badges/ganboonhong/mask-map/status.svg)](https://cloud.drone.io/ganboonhong/mask-map)
-
 ![PHP Composer Install & Test](https://github.com/ganboonhong/mask-map/workflows/PHP%20Composer%20Install%20&%20Test/badge.svg)
 
-### A mask map implementation with Yii framework
+## A mask map implementation with Yii framework
 
-### Nginx recommended Nginx Configuration for Yii application
+- ### Nginx recommended Nginx Configuration for Yii application
 https://github.com/yiisoft/yii2/blob/master/docs/guide/start-installation.md
 
-### server configuration
+- ### server configuration
 ```
 server {
 	#listen 443 ssl;
