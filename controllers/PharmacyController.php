@@ -27,6 +27,7 @@ class PharmacyController extends Controller
         $maskFile = Yii::getAlias('@webroot/static/pharmacy/mask-stock.json');
         $result = json_decode(file_get_contents($maskFile));
 
+
         return Yii::createObject([
             'class' => 'yii\web\Response',
             'format' => \yii\web\Response::FORMAT_JSON,
