@@ -39,6 +39,7 @@ class PharmacyController extends Controller
 
 	public function actionGtm()
 	{
+		// test github webhook
         $this->layout = 'pharmacy-map';
 
         return $this->render('gtm', []);
