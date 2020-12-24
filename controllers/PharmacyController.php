@@ -36,4 +36,11 @@ class PharmacyController extends Controller
             ],
         ]);
     }
+
+	public function actionGtm()
+	{
+        $this->layout = 'pharmacy-map';
+
+        return $this->render('gtm', []);
+	}
 }
