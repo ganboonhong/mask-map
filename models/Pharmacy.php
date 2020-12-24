@@ -80,7 +80,7 @@ class Pharmacy
     private function fetchMaskData(): ?array
     {
         $client = new Client();
-        $response = $client->get('http://data.nhi.gov.tw/Datasets/Download.ashx?rid=A21030000I-D50001-001&l=https://data.nhi.gov.tw/resource/mask/maskdata.csv');
+        $response = $client->get('https://data.nhi.gov.tw/Datasets/Download.ashx?rid=A21030000I-D50001-001&l=https://data.nhi.gov.tw/resource/mask/maskdata.csv');
 
         if ($response->getStatusCode() !== 200) {
             Yii::error('Unable to fetch mask data from NHI', __METHOD__);
