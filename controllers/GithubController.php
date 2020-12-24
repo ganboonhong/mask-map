@@ -26,6 +26,17 @@ class GithubController extends Controller
     }
 
     /**
+     * Deploy to production when PR is merged
+     *
+     * @return string
+     */
+    public function actionUpdate(): string
+    {
+		$github = new Github;
+		return $github->deploy();
+    }
+
+    /**
      * Check whether the webhook event is a PR merge event
      *
      * @param array $data
