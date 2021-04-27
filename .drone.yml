@@ -6,7 +6,7 @@ name: default
 steps:
   - name: install
     # Pipeline steps are defined as a series of Docker containers. Each step must therefore define the Docker image used to create the container.
-    image: composer
+    image: composer:1.9.3
     commands:
       - composer install
 

@@ -39,7 +39,6 @@
         "codeception/module-asserts": "^1.0.0"
     },
     "config": {
-	  	"php": "7.2.25",
         "process-timeout": 1800,
         "fxp-asset": {
             "enabled": false
