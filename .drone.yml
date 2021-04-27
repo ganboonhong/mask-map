@@ -6,7 +6,7 @@ name: default
 steps:
   - name: install
     # Pipeline steps are defined as a series of Docker containers. Each step must therefore define the Docker image used to create the container.
-    image: composer
+    image: php:7
     commands:
       - composer install
 

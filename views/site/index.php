@@ -4,6 +4,7 @@
 
 $this->title = 'My Yii Application';
 ?>
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
 <div class="site-index">
 
     <div class="jumbotron">
