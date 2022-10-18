@@ -15,6 +15,7 @@ class GithubController extends Controller
     public function actionWebhook(): string
     {
         $data = json_decode(file_get_contents('php://input'), true);
+        // test-branch
 
         if ($data && $this->isPRMerged($data)) {
             Yii::info(json_encode($data));
